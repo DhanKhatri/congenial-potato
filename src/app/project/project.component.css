@@ -1,0 +1,11 @@
+.container{
+text-align:center;
+
+}
+.container h1{
+background-color:olivedrab;
+color:white;
+margin-top:6px;
+margin-bottom:5px;
+text-align:center;
+}
