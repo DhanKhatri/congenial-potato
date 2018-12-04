@@ -1,11 +1,12 @@
 .container{
 text-align:center;
-
+margin:10px;
+padding:5px;
 }
-.container h1{
-background-color:olivedrab;
-color:white;
-margin-top:6px;
-margin-bottom:5px;
-text-align:center;
+
+.col-md-4{
+    /* height:200px;
+    width:99%; */
+    border-radius: 10px solid grey;
+  
 }

@@ -1,71 +1,15 @@
-<div class="container">
-    <h1> To-Do App </h1>
-    <div class="row">
-        <div class="col-xs-12">
-
+<hr style="border:5px solid grey">
+<div class ="container">
+    <div class="row" style ="margin-left:10px">
+        <div class="col-md-4" style="background-color:Red; border:5px solid grey">
+<a href ="https://www.iloveit4ever.com"> My Website</a>
         </div>
+        <div class="col-md-4" style="border:5px solid grey">
+             <iframe src="https://www.youtube.com/embed/fzKvol509co" frameborder="0"  allowfullscreen>My Youtube Channel</iframe>
+            </div>
+            <div class="col-md-4" style="background-color:green;border:5px solid grey">
+            <a href ="https://devpost.com/DhanKhatri?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">My DevPost Protofolio</a>
+                </div>
     </div>
- </div>
- 
- <div class="container">
-    <div class="row">
-        <div class="col-xs-8">
-            <input type="text" class="form-control" name="task" placeholder="Task" #taskInput>
-        </div>
- 
-        <div class="col-xs-4">
-            <button class="btn btn-info" (click)="addTask(taskInput)">Add</button>
-        </div>
-    </div>
- 
-    <hr>
- 
-    <div class="row">
-        <div class="col-xs-8">
-            <input type="text" class="form-control" name="filter" placeholder="Filter Keyword(s)" #filterInput>
-        </div>
- 
-        <div class="col-xs-4">
-            <button class="btn btn-info" (click)="filterTasks(filterInput)">Filter</button>
-        </div>
-    </div>
- 
-    <div class="row">
-        <div class="col-xs-12">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>To-Do list</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let task of filtered_tasks; let idx = index">
-                        <td *ngIf="task.is_canceled; else elseTd">
-                            <s>{{ idx + 1 }}. {{task.title}}</s>
-                        </td>
-                        <ng-template #elseTd>
-                            <td>{{ idx + 1 }}. {{task.title}}</td>
-                        </ng-template>
- 
-                        <td>
-                            <button class="btn btn-primary btn-xs" (click)="editTask(idx)"> Edit </button>
-                        </td>
- 
-                        <td>
-                            <button class="btn btn-warning btn-xs" (click)="cancelTask(idx)"> Cancel </button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger btn-xs" (click)="deleteTask(idx)"> Delete </button>
-                        </td>
-                    </tr>
- 
-                </tbody>
-                <tfoot>
-                    <tr>
-                            <button class="btn btn-danger" (click)="clearToDo()">Clear</button>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    </div>
+</div>
+<hr style="border:5px solid grey">

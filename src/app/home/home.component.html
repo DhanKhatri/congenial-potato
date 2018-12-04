@@ -1,4 +1,57 @@
-<div class="jumbotron" height:70px>
-  <h1>Local Hack Day -December 1, 2018</h1>
-<h3>Project</h3>
+<div id="main">
+<hr>
+<nav class= "navbar navbar-light bg-light" style ="margin-left:12px; text-align:center;">
+  
+      <h5 class="navbar-brand mb-0">Add your list item</h5>
+      <h5 style ="margin-left:450px;">Your Item list ({{ itemCount }})</h5>
+  
+  <hr>
+</nav>
+  <div class="row" [@items]="items.length">
+<div class="col-md-6" style="padding:4px; background-color:royalblue;border:2px solid blue;">
+  <h6 style="text-align:center; color:white"><strong>Use this form below to add your new items</strong></h6>
+<form >
+  <input type="text"
+   class="txt" 
+  name="item" 
+  placeholder="My items." [(ngModel)]="itemText">
+  
+
+<input id="submit" type ="submit" class="btn btn-danger" [value]="btnText" (click)="addItem()">
+</form><hr>
+<i>Improve overall data quality by validating user input for accuracy and completeness.
+
+    This page shows how to validate user input in the UI and display useful validation messages using 
+    both reactive and template-driven forms. It assumes some basic knowledge of the two forms modules.</i>
 </div>
+<div class="col-md-6" style="padding:4px; border:2px solid grey;
+ background-color:lightgrey;">
+  <p *ngFor="let item of items; let i = index" (click) ="removeItem(i)">
+{{ item }}
+  </p>
+</div>
+  </div>
+  <div><hr>
+    <h1 style="text-align:center; background-color:black; 
+    padding:9px;margin:5px;border:2px solid grey; 
+    font-weight: bold; 
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;color:white;">Why this project app : Smart-List-Item : is cool?</h1>
+    <h6 style= "text-align:center;">
+        There are some requirements for the this project app:
+    </h6>
+<ul style="margin-left:20px">
+  <li>Create new component and nest to eachother properly</li>
+  <li> Add a home view with navbar brand view.</li>
+  <li>Add router to navigate pages without rendering html page on browser</li>
+  <li> Add the ability to navigate between the Home and about views.</li>
+  <li> When users types anything and click<i>Add an Item</i> then it goes right box with funnky animation.</li>
+  <li>When users click items in the right box; it automatically removes from there with animated way.</li>
+</ul>
+        
+       
+       
+        
+     
+  </div>
+  </div>
